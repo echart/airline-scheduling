@@ -1,0 +1,27 @@
+@use 'variables';
+@use 'mixins';
+
+@import 'normalize';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+}
+
+button,
+a[href='*'] {
+  position: relative;
+
+  &:focus {
+    border: 1px solid variables.$color-primary;
+    cursor: pointer;
+    @include mixins.focus;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

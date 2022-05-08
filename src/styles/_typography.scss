@@ -1,0 +1,52 @@
+@use 'variables';
+
+//importing Roboto from Googlefonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  font-family: variables.$font-family-base;
+}
+
+body {
+  font-family: variables.$font-family-base;
+  font-size: variables.$font-size-base;
+  line-height: variables.$line-height-base;
+  color: variables.$color-text;
+}
+
+/**
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: variables.$font-weight-normal;
+
+  small {
+    font-size: 80%;
+  }
+}
+
+h1 {
+  font-size: variables.$font-size-xlarge;
+  line-height: variables.$line-height-large;
+}
+
+h2 {
+  font-size: variables.$font-size-large;
+  line-height: variables.$line-height-large;
+}
+
+h3 {
+  font-size: variables.$font-size-medium;
+  line-height: variables.$line-height-medium;
+}
+
+strong,
+b {
+  font-weight: variables.$font-weight-bold;
+}

@@ -1,0 +1,62 @@
+/**
+ * Colors
+ * =================================
+ */
+$white: #fff;
+$blue-light: #8dccf6;
+$blue: #209cee;
+$dark: #323031;
+$grey: #c0c0c0;
+$green: #63b995;
+$emerald: #33ca7f;
+$red: #DB4C40;
+$orange: #F96E46;
+$middle-red: #E2856E;
+$yellow: #F9C80E;
+
+/**
+ * Application colors
+ * =================================
+ */
+$color-bg: $white;
+$color-primary: $green;
+$color-secondary: $white;
+$color-terciary: $emerald;
+$color-text: $dark;
+
+/**
+ * Ttypography
+ * =================================
+ */
+$font-size-small: 12px;
+$font-size-medium: 14px;
+$font-size-base: 16px;
+$font-size-large: 18px;
+$font-size-xlarge: 22px;
+
+$line-height-small: 16px;
+$line-height-medium: 18px;
+$line-height-base: 20px;
+$line-height-large: 24px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$font-family-base: 'Roboto', sans-serif;
+
+/**
+ * Grid and structure
+ * =================================
+ */
+$layout-padding: 16px;
+$layout-margin: 0; // (pixels)
+$layout-max-width: 1240; // (pixels)
+$grid-column-count: 12; // (pixels)
+$grid-gutter-width: 16; // (pixels)
+
+/**
+ * Application transitions
+ * =================================
+ */
+$transition-duration: 300ms;
