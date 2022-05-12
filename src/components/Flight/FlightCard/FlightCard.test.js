@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 
 import { render, fireEvent } from '@testing-library/react';
 import { FlightCard } from './FlightCard';

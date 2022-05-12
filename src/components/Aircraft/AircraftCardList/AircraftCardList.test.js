@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 
 import { render } from '@testing-library/react';
 import { AircraftCardList } from './AircraftCardList';

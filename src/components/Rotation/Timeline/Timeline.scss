@@ -1,0 +1,88 @@
+@use 'src/styles/variables';
+
+$timeline-height: 12;
+$timeline-bg: variables.$grey;
+$timeline-item-width: 3;
+$timeline-item-height: 12;
+
+$flight-color: variables.$green;
+$turnaround-color: purple;
+$iddle-color: variables.$grey;
+
+@mixin calcLineTop {
+  top: calc(((($timeline-item-height * 2) - $timeline-height) / 2) * -1px);
+}
+
+.timeline {
+  background-color: $timeline-bg;
+  height: $timeline-height * 1px;
+  width: 100%;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    background-color: $timeline-bg;
+    width: $timeline-item-width * 1px;
+    height: $timeline-item-height * 2px;
+    left: $timeline-item-width * -1px;
+    position: absolute;
+    @include calcLineTop;
+  }
+
+  &:after {
+    left: auto;
+    right: $timeline-item-width * -1px;
+  }
+
+  &-container {
+    width: 100%;
+    padding: variables.$layout-padding;
+  }
+
+  &__item {
+    background-color: variables.$color-primary;
+    position: absolute;
+    height: $timeline-item-height * 1px;
+    top: calc((($timeline-item-height - $timeline-height) / 2) * -1px);
+
+    p {
+      background-color: variables.$color-secondary;
+      border: 1px solid variables.$dark;
+      border-radius: 4px;
+      display: none;
+      font-size: variables.$font-size-medium;
+      min-width: 160px;
+      padding: 8px 16px;
+      top: 25px;
+      position: absolute;
+      width: 100%;
+
+      span {
+        font-size: variables.$font-size-small;
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.15);
+      transition: transform variables.$transition-duration;
+      z-index: 2;
+      box-shadow: 5px 4px 11px -6px rgba(0, 0, 0, 0.75);
+
+      p {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &--turnaround {
+      background-color: $turnaround-color;
+
+      p {
+        font-size: variables.$font-size-small;
+      }
+    }
+  }
+}

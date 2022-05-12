@@ -1,4 +1,5 @@
 # List component
+
 A simple list component to render list items
 
 ## Props
@@ -6,3 +7,5 @@ A simple list component to render list items
 **items** (required _array_): array of interable items
 
 **className** (_string_): a string to be applied as className of the ul element
+
+**itemClassName** (_string_): a string to be applied as className of each li element

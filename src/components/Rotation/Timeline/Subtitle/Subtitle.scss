@@ -1,0 +1,40 @@
+@use 'src/styles/variables';
+@use '../Timeline.scss' as timeline;
+
+@mixin subtitleColor($color) {
+  &:before {
+    background-color: $color;
+  }
+}
+
+.subtitle {
+  border-color: variables.$color-primary;
+  font-size: variables.$font-size-small;
+  padding-top: variables.$layout-padding;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+
+    &:before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      margin-right: 8px;
+    }
+
+    &.scheduled{
+      @include subtitleColor(timeline.$flight-color);
+    }
+
+    &.turnaround{
+      @include subtitleColor(timeline.$turnaround-color);
+    }
+
+    &.iddle{
+      @include subtitleColor(timeline.$iddle-color);
+    }
+  }
+}
