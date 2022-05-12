@@ -6,13 +6,15 @@ export const Button = ({
   onClick = () => null,
   className = '',
   children,
-  testId = 'component-button'
+  testId = 'component-button',
+  disabled = false,
 }) => (
   <button
     type={type}
     data-testid={testId}
     onClick={onClick}
     className={`btn ${className}`}
+    disabled={disabled}
   >
     {children}
   </button>
@@ -24,4 +26,5 @@ Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node.isRequired,
   testId: PropTypes.string,
+  disabled: PropTypes.bool,
 };
