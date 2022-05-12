@@ -1,0 +1,33 @@
+@use 'src/styles/variables';
+
+.flight-card {
+  border: 2px solid variables.$color-primary;
+  border-radius: 4px;
+  display: flex;
+  padding: variables.$layout-padding;
+  width: 100%;
+
+  color: variables.$dark;
+
+  .station {
+    &__name {
+      font-size: variables.$font-size-large;
+      line-height: variables.$line-height-large;
+      font-weight: variables.$font-weight-bold;
+      margin-bottom: 4px;
+    }
+  }
+
+  .departure {
+    text-align: left;
+  }
+
+  .arrival {
+    text-align: right;
+  }
+
+  .card__container span {
+    font-size: 30px;
+    font-weight: variables.$font-weight-light;
+  }
+}
