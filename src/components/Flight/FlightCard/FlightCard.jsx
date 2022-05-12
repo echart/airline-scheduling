@@ -10,11 +10,13 @@ export const FlightCard = ({
   departuretime,
   destination,
   arrivaltime,
+  disabled,
 }) => (
   <Button
     testId="flight-card"
     className="card flight-card"
     onClick={onSelect}
+    disabled={disabled}
   >
     <h3 className="card__title flight">
       Flight: <strong>{id}</strong>
@@ -40,4 +42,5 @@ FlightCard.propTypes = {
   departuretime: PropTypes.number.isRequired,
   arrivaltime: PropTypes.number.isRequired,
   onSelect: PropTypes.func,
+  disabled: PropTypes.bool,
 };
