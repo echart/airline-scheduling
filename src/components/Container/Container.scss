@@ -11,7 +11,9 @@
     background: variables.$color-primary;
   }
 
-  &__content {
-    padding: variables.$layout-padding;
+  &--padding {
+    .container__content {
+      padding: variables.$layout-padding;
+    }
   }
 }

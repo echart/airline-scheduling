@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { Container as Component } from './Container';
 
 export default {
@@ -13,4 +12,5 @@ Container.args = {
   title: 'Airline scheduling',
   className: 'container-test',
   children: 'Lorem ipsum',
+  hasPadding: true,
 }
