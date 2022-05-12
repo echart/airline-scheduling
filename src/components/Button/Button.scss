@@ -1,0 +1,10 @@
+@use 'src/styles/mixins';
+
+.btn {
+  position: relative;
+  cursor: pointer;
+
+  @include mixins.btn-reset;
+  @include mixins.focus();
+  @include mixins.hover;
+}

@@ -1,0 +1,62 @@
+@use 'src/styles/variables';
+@use 'src/styles/mixins';
+
+//aircraft-theme
+$aircraft-card-bg: variables.$color-bg;
+$aircraft-card-color: variables.$color-primary;
+$aircraft-card-color-selected: variables.$color-terciary;
+$aircraft-card-color-half: variables.$yellow;
+$aircraft-card-color-full: variables.$middle-red;
+$aircraft-card-text: variables.$color-text;
+
+//mixin for adding background colors based on utilisation;
+@mixin utilizationColors($color) {
+  .aircraft__utilization {
+    background-color: $color;
+  }
+}
+
+.aircraft {
+  background: $aircraft-card-bg;
+  color: $aircraft-card-text;
+  padding: 8px variables.$layout-padding;
+  width: 100%;
+  border: none;
+
+  @include mixins.v-center;
+  justify-content: space-between;
+  @include utilizationColors($aircraft-card-color);
+
+  &:focus {
+    z-index: 10;
+  }
+
+  &__utilization {
+    border-radius: 4px;
+    color: variables.$dark;
+    height: 48px;
+    text-align: center;
+    width: 48px;
+
+    @include mixins.center;
+  }
+
+  &--selected {
+    background-color: rgba($aircraft-card-color, 0.3);
+  }
+
+  &--half {
+    @include utilizationColors($aircraft-card-color-half);
+  }
+
+  &--full {
+    @include utilizationColors($aircraft-card-color-full);
+  }
+
+  &:hover {
+    background-color: rgba($aircraft-card-color, 0.20);
+    cursor: pointer;
+    opacity: 1;
+    transition: background 300ms;
+  }
+}
