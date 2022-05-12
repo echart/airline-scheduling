@@ -1,0 +1,28 @@
+@use 'variables';
+
+/**
+ * GRID
+ * I do not focus on grid items
+ * I also do not want to copy it from anywhere or use any plugin
+ * so I will only create the columns I need to build the layout
+ * ===============
+ */
+
+.layout {
+  display: flex;
+  justify-content: center;
+  max-width: variables.$layout-max-width * 1px;
+  margin: 0 auto;
+  width: 100%;
+  padding: variables.$layout-padding;
+}
+
+.column-4 {
+  width: calc((variables.$layout-max-width / variables.$grid-column-count) * 3 * 1px);
+  margin: 0 calc(variables.$layout-padding / 2);
+}
+
+.column-8 {
+  width: calc((variables.$layout-max-width / variables.$grid-column-count) * 6 * 1px);
+  margin: 0 calc(variables.$layout-padding / 2);
+}

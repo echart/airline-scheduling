@@ -1,18 +1,31 @@
-@use './variables';
+@use 'variables';
 
-@mixin focus {
-  $size: 3;
-
-  &:after {
-    content: "";
-    width: calc(100% + ($size * 2px));
-    height: calc(100% + ($size * 2px));
-    left: $size * -1px;
-    top: $size * -1px;
-    border: ($size * 1px) solid rgba(51, 202, 127, 0.3);
-    position: absolute;
-    z-index: -1;
+@mixin focus($size: 5) {
+  &:focus {
+    &:after {
+      content: "";
+      width: calc(100% + ($size * 2px));
+      height: calc(100% + ($size * 2px));
+      left: $size * -1px;
+      top: $size * -1px;
+      border: ($size * 1px) solid rgba(variables.$color-primary, 0.3);
+      position: absolute;
+      z-index: -1;
+    }
   }
+}
+
+@mixin hover {
+  &:hover {
+    background-color: rgba(variables.$color-primary, 0.10);
+    transition: background-color variables.$transition-duration;
+  }
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin v-center {
@@ -22,5 +35,11 @@
 
 @mixin h-center {
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+@mixin btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }

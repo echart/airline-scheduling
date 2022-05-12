@@ -11,17 +11,43 @@
   margin: 0;
 }
 
+body {
+  color: variables.$color-text;
+}
+
 button,
 a[href='*'] {
   position: relative;
+  cursor: pointer;
 
   &:focus {
-    border: 1px solid variables.$color-primary;
-    cursor: pointer;
     @include mixins.focus;
   }
 
   &:hover {
     opacity: 0.8;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  &__title {
+    font-size: variables.$font-size-large;
+  }
+
+  &__container {
+    @include mixins.v-center;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    width: 100%;
   }
 }
