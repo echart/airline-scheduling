@@ -1,4 +1,4 @@
-export default {
+const flight = {
   id: 'AS1002',
   departuretime: 27900,
   arrivaltime: 32100,
@@ -7,3 +7,5 @@ export default {
   origin: 'LFMN',
   destination: 'LFSB',
 };
+
+export default flight;
