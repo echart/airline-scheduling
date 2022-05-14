@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import {
   formatFlightAsTimelineItem,
@@ -8,17 +9,21 @@ export const useTimeline = (flights = []) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const empty = [];
+    const timeline = [];
 
-    if (!flights) return setItems(empty);
+    if (!flights) return setItems([]);
 
-    flights.map((flight) => {
-      empty.push(formatFlightAsTimelineItem(flight));
-      empty.push(addFlightTurnaroundTime(flight));
-    });
+    for (const flight of flights) {
+      timeline.push(formatFlightAsTimelineItem(flight));
+      timeline.push(addFlightTurnaroundTime(flight));
+    }
 
-    setItems(empty);
+    setItems(timeline);
   }, [flights]);
 
   return items;
+};
+
+useTimeline.propTypes = {
+  flights: PropTypes.array,
 };

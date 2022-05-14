@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'mixins';
 
 /**
  * GRID
@@ -9,9 +10,9 @@
  */
 
 .layout {
-  display: flex;
-  justify-content: center;
-  max-width: variables.$layout-max-width * 1px;
+  @include mixins.h-center;
+  align-items: flex-start;
+  // max-width: variables.$layout-max-width * 1px;
   margin: 0 auto;
   width: 100%;
   padding: variables.$layout-padding;

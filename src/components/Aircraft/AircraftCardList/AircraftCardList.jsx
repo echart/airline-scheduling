@@ -12,6 +12,7 @@ export const AircraftCardList = ({
       items={aircrafts.map((aircraft) => (
         <AircraftCard
           {...aircraft}
+          id={aircraft.ident}
           selected={selectedId === aircraft.id}
           onSelect={onSelect}
         />

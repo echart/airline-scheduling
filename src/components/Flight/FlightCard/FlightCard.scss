@@ -9,10 +9,14 @@
 
   color: variables.$dark;
 
+  .card__title {
+    font-size: variables.$font-size-base;
+  }
+
   .station {
     &__name {
-      font-size: variables.$font-size-large;
-      line-height: variables.$line-height-large;
+      font-size: variables.$font-size-medium;
+      line-height: variables.$line-height-medium;
       font-weight: variables.$font-weight-bold;
       margin-bottom: 4px;
     }
