@@ -20,7 +20,7 @@ export const Datepicker = ({
       type="date"
       name="rotation-day"
       value={formatDate(date)}
-      onChange={() => null}
+      onChange={onChangeDate}
       disabled
     />
   );
