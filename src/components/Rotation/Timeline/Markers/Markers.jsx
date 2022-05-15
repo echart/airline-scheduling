@@ -1,8 +1,9 @@
 import './Markers.scss';
 import List from '../../../List';
+import config from '../../../../config/config';
 
 export const Markers = () => {
-  const TIMELINE_MARKERS = ['00:00', '06:00', '12:00', '18:00', '23:59'];
+  const TIMELINE_MARKERS = config.markers;
 
   return (
     <List
