@@ -14,7 +14,6 @@ export const Datepicker = ({
   date = getTomorrow(),
   onChangeDate = () => null,
 }) => {
-  console.log(date, formatDate(date));
   return (
     <input
       className="datepicker"
