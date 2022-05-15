@@ -8,9 +8,10 @@
       height: calc(100% + ($size * 2px));
       left: $size * -1px;
       top: $size * -1px;
-      border: ($size * 1px) solid rgba(variables.$grey, 0.3);
+      border: ($size * 1px) solid rgba(variables.$dark, 0.3);
+      border-radius: 4px;
       position: absolute;
-      z-index: -1;
+      z-index: 2;
     }
   }
 }
