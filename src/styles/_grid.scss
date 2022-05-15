@@ -27,3 +27,15 @@
   width: calc((variables.$layout-max-width / variables.$grid-column-count) * 6 * 1px);
   margin: 0 calc(variables.$layout-padding / 2);
 }
+
+@media (max-width: 800px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .column-8,
+  .column-4 {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
