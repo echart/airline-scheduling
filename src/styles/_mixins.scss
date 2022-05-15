@@ -8,7 +8,7 @@
       height: calc(100% + ($size * 2px));
       left: $size * -1px;
       top: $size * -1px;
-      border: ($size * 1px) solid rgba(variables.$color-primary, 0.3);
+      border: ($size * 1px) solid rgba(variables.$grey, 0.3);
       position: absolute;
       z-index: -1;
     }
@@ -17,7 +17,7 @@
 
 @mixin hover {
   &:hover {
-    background-color: rgba(variables.$color-primary, 0.10);
+    background-color: rgba(variables.$color-primary, 0.20);
     transition: background-color variables.$transition-duration;
   }
 }
