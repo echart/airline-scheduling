@@ -8,7 +8,7 @@ export default {
 };
 
 const Template = (args) => {
-  const [selectedId, setSelectedId] = useState(AircraftMock.id);
+  const [selectedId, setSelectedId] = useState(AircraftMock.ident);
 
   return <Component {...args} selectedId={selectedId} onSelect={setSelectedId} />;
 };
@@ -17,8 +17,8 @@ export const AircraftCardList = Template.bind({});
 AircraftCardList.args = {
   aircrafts: [
     AircraftMock,
-    { id: 'BCAD', utilization: 49 },
-    { id: 'ACDB', utilization: 51 },
-    { id: 'ADCB', utilization: 100 },
+    { ident: 'BCAD', utilization: 49 },
+    { ident: 'ACDB', utilization: 51 },
+    { ident: 'ADCB', utilization: 100 },
   ],
 };

@@ -3,14 +3,14 @@ import Button from '../../Button';
 import './AircraftCard.scss';
 
 export const AircraftCard = ({
-  id,
+  ident,
   utilization = 0,
   onSelect = () => null,
   selected = false,
 }) => (
   <Button
     testId='aircraft-card'
-    onClick={() => onSelect(id)}
+    onClick={() => onSelect(ident)}
     className={`
       aircraft
       ${selected && `aircraft--selected`}
@@ -19,14 +19,14 @@ export const AircraftCard = ({
     `}
   >
     <h3 className="aircraft__name">
-      <strong>{id}</strong>
+      <strong>{ident}</strong>
     </h3>
     <p className="aircraft__utilization">{utilization}%</p>
   </Button>
 );
 
 AircraftCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  ident: PropTypes.string.isRequired,
   utilization: PropTypes.number,
   onSelect: PropTypes.func,
   selected: PropTypes.bool,

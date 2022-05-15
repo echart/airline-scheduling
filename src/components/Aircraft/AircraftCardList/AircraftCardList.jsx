@@ -12,8 +12,7 @@ export const AircraftCardList = ({
       items={aircrafts.map((aircraft) => (
         <AircraftCard
           {...aircraft}
-          id={aircraft.ident}
-          selected={selectedId === aircraft.id}
+          selected={selectedId === aircraft.ident}
           onSelect={onSelect}
         />
       ))}
@@ -25,10 +24,10 @@ AircraftCardList.propTypes = {
   aircrafts: PropTypes.arrayOf(
     //based on AircraftCard component
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      ident: PropTypes.string.isRequired,
       utilization: PropTypes.number,
     })
   ),
-  selectedId: PropTypes.string.isRequired,
+  selectedId: PropTypes.string,
   onSelect: PropTypes.func,
 };

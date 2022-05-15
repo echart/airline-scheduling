@@ -2,7 +2,7 @@
 The aircraft Card component is a Layout(UI) component to render the aircraft name and its utilization.
 
 ## Props
-**id** (*required string*): Identifier for the aircraft
+**ident** (*required string*): Identifier for the aircraft
 
 **name** (*required string*): The aircraft name to show to user
 
