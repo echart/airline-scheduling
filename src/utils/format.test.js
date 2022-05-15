@@ -11,7 +11,7 @@ it('return the correct time value when using formatTime', () => {
 
 it('return the correct value when using formatNumberToPercentage', () => {
   const INITIAL = 36;
-  const EXPECTED = '36%';
+  const EXPECTED = '36.0%';
 
   const percentage = formatNumberToPercentage(INITIAL);
   expect(percentage).toBe(EXPECTED);

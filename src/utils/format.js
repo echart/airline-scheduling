@@ -22,4 +22,4 @@ export const formatTime = (timeInSeconds) =>
  *
  */
 
-export const formatNumberToPercentage = (number) => `${number}%`;
+export const formatNumberToPercentage = (number) => `${number.toFixed(1)}%`;

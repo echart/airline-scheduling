@@ -1,5 +1,7 @@
-export const TIME_FULLDAY = 86400;
-export const TIME_TURNAROUND = 1200;
+import config from "../config/config";
+
+export const TIME_FULLDAY = config.fullday_time;
+export const TIME_TURNAROUND = config.turnaround_time;
 
 /**
  *
