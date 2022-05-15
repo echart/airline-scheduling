@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders app', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Hello world/i);
-  expect(linkElement).toBeInTheDocument();
+  const scheduler = screen.getByText(/Rotation/i);
+  expect(scheduler).toBeInTheDocument();
 });

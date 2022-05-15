@@ -1,10 +1,11 @@
+import { Scheduler } from './components/Scheduler/Scheduler';
 //app styles
 import './styles/styles.scss';
 
 function App() {
   return (
-    <main className="app layout">
-      Hello World
+    <main className="app">
+      <Scheduler />
     </main>
   );
 }
