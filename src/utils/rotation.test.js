@@ -6,6 +6,7 @@ import {
   isTimeAvailable,
   getFlightDuration,
   getUtilization,
+  willBeOnTheGroundAtMidnight,
 } from './rotation';
 
 const rotation = [flights[0], flights[1]];
@@ -78,4 +79,20 @@ it('calculate the correct utilization of an aircraft', () => {
   expect(noFlights).toBe(0);
   expect(half).toBe(50.0);
   expect(allDay).toBe(100.0);
+});
+
+it('check if aircraft will be at ground at midnight', () => {
+  const willBe = willBeOnTheGroundAtMidnight(flights[0]);
+  const notWillBe = willBeOnTheGroundAtMidnight({
+    id: 'AS8896',
+    departuretime: 75600,
+    arrivaltime: 88800,
+    readable_departure: '21:00',
+    readable_arrival: '00:40',
+    origin: 'GMMX',
+    destination: 'EGKK',
+  });
+
+  expect(willBe).toBe(true);
+  expect(notWillBe).toBe(false);
 });
