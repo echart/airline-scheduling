@@ -42,6 +42,17 @@ export const isTimeAvailable = (rotation = [], flight) => {
 };
 
 /**
+ * check if aircraft will be on the ground at midnight
+ *
+ * - All aircrafts must be on the ground at midnight.
+ *
+ * ===================
+ */
+export const willBeOnTheGroundAtMidnight = (flight) => {
+  return flight.arrivaltime <= config.fullday_time;
+};
+
+/**
  * check if the flight is available by applying the airport and time rules
  *
  * ===================
@@ -49,7 +60,9 @@ export const isTimeAvailable = (rotation = [], flight) => {
 
 export const getFlightAvailability = (rotation, flight) => {
   return (
-    isTimeAvailable(rotation, flight) && isOnTheSameAirport(rotation, flight)
+    isTimeAvailable(rotation, flight) &&
+    isOnTheSameAirport(rotation, flight) &&
+    willBeOnTheGroundAtMidnight(flight)
   );
 };
 
@@ -80,5 +93,5 @@ export const getUtilization = (rotation = []) => {
     total += config.turnaround_time; //add turnaround time;
   }
 
-  return ((total * 100) / day);
+  return (total * 100) / day;
 };
