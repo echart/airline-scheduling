@@ -4,6 +4,6 @@ The Aircraft Card List component is a Layout(UI) component to render a list of a
 ## Props
 **aircrafts** (*required array*): Array of aicrafts to render
 
-**selectedId** (*required string*): The id of the selected aircraft
+**active** (*required string*): The id of the selected aircraft
 
 **onSelect** (*function*): A function to select the clicked aircraft item on the list

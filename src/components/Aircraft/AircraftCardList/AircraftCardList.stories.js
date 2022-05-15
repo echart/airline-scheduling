@@ -8,9 +8,9 @@ export default {
 };
 
 const Template = (args) => {
-  const [selectedId, setSelectedId] = useState(AircraftMock.ident);
+  const [active, setActive] = useState(AircraftMock.ident);
 
-  return <Component {...args} selectedId={selectedId} onSelect={setSelectedId} />;
+  return <Component {...args} active={active} onSelect={setActive} />;
 };
 
 export const AircraftCardList = Template.bind({});

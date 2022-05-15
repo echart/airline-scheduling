@@ -11,11 +11,12 @@ export const FlightCard = ({
   destination,
   arrivaltime,
   disabled,
+  hoverText,
 }) => (
   <Button
     testId="flight-card"
     className="card flight-card"
-    onClick={onSelect}
+    onClick={() => onSelect(id)}
     disabled={disabled}
   >
     <h3 className="card__title flight">
@@ -32,6 +33,12 @@ export const FlightCard = ({
         <p className="station__time">{formatTime(arrivaltime)}</p>
       </div>
     </div>
+
+    {hoverText && (
+      <span className="hover-text">
+        <p>{hoverText}</p>
+      </span>
+    )}
   </Button>
 );
 
@@ -43,4 +50,5 @@ FlightCard.propTypes = {
   arrivaltime: PropTypes.number.isRequired,
   onSelect: PropTypes.func,
   disabled: PropTypes.bool,
+  hoverText: PropTypes.string,
 };

@@ -23,3 +23,17 @@ export const formatTime = (timeInSeconds) =>
  */
 
 export const formatNumberToPercentage = (number) => `${number.toFixed(1)}%`;
+
+/**
+ * format date to format yyyy-mm-dd
+ *
+ * ===================
+ *
+ */
+
+export const formatDate = (date) =>
+  new Intl.DateTimeFormat('sv-SE', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date);

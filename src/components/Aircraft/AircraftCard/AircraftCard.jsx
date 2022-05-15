@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { formatNumberToPercentage } from '../../../utils/format';
 import Button from '../../Button';
 import './AircraftCard.scss';
 
@@ -9,7 +10,7 @@ export const AircraftCard = ({
   selected = false,
 }) => (
   <Button
-    testId='aircraft-card'
+    testId="aircraft-card"
     onClick={() => onSelect(ident)}
     className={`
       aircraft
@@ -21,7 +22,9 @@ export const AircraftCard = ({
     <h3 className="aircraft__name">
       <strong>{ident}</strong>
     </h3>
-    <p className="aircraft__utilization">{utilization}%</p>
+    <p className="aircraft__utilization">
+      {formatNumberToPercentage(utilization)}
+    </p>
   </Button>
 );
 

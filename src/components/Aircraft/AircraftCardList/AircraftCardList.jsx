@@ -1,22 +1,25 @@
 import PropTypes from 'prop-types';
 import AircraftCard from '../AircraftCard';
 import List from '../../List';
+import { getUtilization } from '../../../utils/rotation';
 
 export const AircraftCardList = ({
   aircrafts = [],
-  selectedId,
+  active,
   onSelect = () => null,
+  rotation = [],
 }) => {
   return (
     <List
       items={aircrafts.map((aircraft) => (
         <AircraftCard
           {...aircraft}
-          selected={selectedId === aircraft.ident}
+          selected={active === aircraft.ident}
           onSelect={onSelect}
+          utilization={getUtilization(rotation)}
         />
       ))}
-    ></List>
+    />
   );
 };
 
@@ -28,6 +31,7 @@ AircraftCardList.propTypes = {
       utilization: PropTypes.number,
     })
   ),
-  selectedId: PropTypes.string,
+  active: PropTypes.string,
   onSelect: PropTypes.func,
+  utilization: PropTypes.number,
 };

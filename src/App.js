@@ -1,4 +1,4 @@
-import { Scheduler } from './components/Scheduler/Scheduler';
+import Scheduler from './components/Scheduler';
 //app styles
 import './styles/styles.scss';
 

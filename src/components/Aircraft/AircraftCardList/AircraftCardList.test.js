@@ -12,7 +12,7 @@ it('render aircraft card list', () => {
   const { getByTestId } = render(
     <AircraftCardList
       aircrafts={aircrafts}
-      selectedId={aircrafts[0].id}
+      active={aircrafts[0].id}
       onSelect={jest.fn()}
     />
   );
@@ -24,7 +24,7 @@ it('renders aircraft card list with correct size', () => {
   const { getByTestId } = render(
     <AircraftCardList
       aircrafts={aircrafts}
-      selectedId={aircrafts[0].id}
+      active={aircrafts[0].id}
       onSelect={jest.fn()}
     />
   );

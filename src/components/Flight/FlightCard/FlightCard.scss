@@ -6,6 +6,7 @@
   display: flex;
   padding: variables.$layout-padding;
   width: 100%;
+  position: relative;
 
   color: variables.$dark;
 
@@ -33,5 +34,37 @@
   .card__container span {
     font-size: 30px;
     font-weight: variables.$font-weight-light;
+  }
+
+  .hover-text {
+    display: none;
+  }
+
+  &:hover:not(:disabled) {
+    .hover-text {
+      display: flex;
+
+      p {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: variables.$white;
+        font-size: variables.$font-size-base;
+        font-weight: variables.$font-weight-bold;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(variables.$dark, 0.8);
+      }
+    }
   }
 }

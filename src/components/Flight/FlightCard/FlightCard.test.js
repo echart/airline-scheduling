@@ -32,7 +32,7 @@ it('renders flight card with correct information', () => {
 it('flight card calls the correct function on click', () => {
   const onClick = jest.fn();
 
-  const { getByTestId } = render(<FlightCard {...data} onSelect={onClick} />);
+  const { getByTestId } = render(<FlightCard {...data} onSelect={() => onClick()} />);
   const card = getByTestId(TEST_ID);
 
   fireEvent.click(card);
