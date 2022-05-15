@@ -1,5 +1,5 @@
 const aircraft = {
-  id: 'ABCD',
+  ident: 'ABCD',
   utilization: 15,
 }
 
