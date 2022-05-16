@@ -12,7 +12,7 @@ const reducer = (state, action) => {
     case 'prev':
       return {
         ...state,
-        offset: state.offset - state.limit,
+        offset: state.offset !== 0 ? state.offset - state.limit : 0,
         page: state.page - 1,
       };
     case 'update':
