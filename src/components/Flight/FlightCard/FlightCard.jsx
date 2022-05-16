@@ -12,9 +12,10 @@ export const FlightCard = ({
   arrivaltime,
   disabled,
   hoverText,
+  testId = 'flight-card',
 }) => (
   <Button
-    testId="flight-card"
+    testId={testId}
     className="card flight-card"
     onClick={() => onSelect(id)}
     disabled={disabled}
@@ -25,12 +26,12 @@ export const FlightCard = ({
     <div className="card__container">
       <div className="station departure">
         <p className="station__name">{origin}</p>
-        <p className="station__time">{formatTime(departuretime)}</p>
+        <p className="station__time" data-time={departuretime}>{formatTime(departuretime)}</p>
       </div>
       <span>{'>'}</span>
       <div className="station arrival">
         <p className="station__name">{destination}</p>
-        <p className="station__time">{formatTime(arrivaltime)}</p>
+        <p className="station__time" data-time={arrivaltime}>{formatTime(arrivaltime)}</p>
       </div>
     </div>
 
@@ -51,4 +52,5 @@ FlightCard.propTypes = {
   onSelect: PropTypes.func,
   disabled: PropTypes.bool,
   hoverText: PropTypes.string,
+  testId: PropTypes.string,
 };

@@ -26,6 +26,7 @@ export const FlightList = ({
           onSelect={onAddRotation}
           hoverText={text}
           disabled={!getFlightAvailability(rotation, flight)}
+          testId={`flight-${flight.id}`}
         />
       ))}
     />

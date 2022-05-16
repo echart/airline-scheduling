@@ -22,6 +22,8 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.11",
+    "cypress": "^9.6.1",
+    "cypress:open": "cypress open",
     "prop-types": "^15.8.1",
     "webpack": "^5.72.0"
   },
