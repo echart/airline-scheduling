@@ -4,9 +4,17 @@ import PropTypes from 'prop-types';
 const reducer = (state, action) => {
   switch (action.type) {
     case 'next':
-      return { ...state, offset: state.offset + state.limit };
+      return {
+        ...state,
+        offset: state.offset + state.limit,
+        page: state.page + 1,
+      };
     case 'prev':
-      return { ...state, offset: state.offset - state.limit };
+      return {
+        ...state,
+        offset: state.offset - state.limit,
+        page: state.page - 1,
+      };
     case 'update':
       return { ...state, ...action.payload };
     default:
@@ -14,18 +22,14 @@ const reducer = (state, action) => {
   }
 };
 
-export const usePagination = (limit = 10, offset = 0) => {
+export const usePagination = (limit = 20, offset = 0) => {
   const [state, dispatch] = useReducer(reducer, { offset, limit });
 
   return {
     limit: state.limit,
     offset: state.offset,
     asParams: `limit=${state.limit}&offset=${state.offset}`,
-    actions: {
-      next: () => dispatch({ type: 'next ' }),
-      prev: () => dispatch({ type: 'prev ' }),
-      update: (payload) => dispatch({ type: 'update ', payload }),
-    },
+    dispatch,
   };
 };
 

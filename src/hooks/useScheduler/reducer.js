@@ -14,6 +14,24 @@ export const reducer = (state, action) => {
         initialized: true,
       };
     /*
+     * updateFlights
+     * ============
+     */
+    case 'updateFlights' :
+      return {
+        ...state,
+        flights: {...action.payload},
+      };
+    /*
+     * updateAircrafts
+     * ============
+     */
+    case 'updateAircrafts':
+      return {
+        ...state,
+        aircrafts: {...action.payload},
+      };
+    /*
      * addItemIntoRotation
      * add item into the current selected aircraft rotation
      * ============
@@ -72,6 +90,6 @@ export const reducer = (state, action) => {
      * ============
      */
     default:
-      return state;
+      throw new Error();
   }
 };

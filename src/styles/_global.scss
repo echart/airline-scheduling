@@ -32,6 +32,11 @@ a[href='*'] {
 ul {
   list-style: none;
   padding: 0;
+
+  &.with-overflow {
+    max-height: 450px;
+    overflow: auto;
+  }
 }
 
 .card {

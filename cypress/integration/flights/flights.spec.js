@@ -8,7 +8,7 @@ describe('flight: testing render and behavior', () => {
   });
 
   it('load flight list correctly', () => {
-    cy.get('.flights-list>li').its('length').should('be.equal', 10);
+    cy.get('.flights-list>li').its('length').should('be.equal', 20);
   });
 
   it('click a flight from the list and check if it was removed', () => {

@@ -5,7 +5,7 @@ import RotationList from '../Rotation/RotationList';
 import Datepicker from '../Datepicker';
 
 import useScheduler from '../../hooks/useScheduler';
-import { FlightList } from '../Flight/FlightList/FlightList';
+import FlightList from '../Flight/FlightList';
 
 export const Scheduler = () => {
   const scheduler = useScheduler();
@@ -19,6 +19,7 @@ export const Scheduler = () => {
           active={aircrafts.active}
           onSelect={actions.onSelectAircraft}
           rotation={rotation}
+          pagination={aircrafts.pagination}
         />
       </Container>
       <Container
@@ -44,6 +45,7 @@ export const Scheduler = () => {
           rotation={rotation}
           onAddRotation={actions.onAddRotation}
           loading={flights.loading}
+          pagination={flights.pagination}
         />
       </Container>
     </section>

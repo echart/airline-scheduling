@@ -6,7 +6,7 @@ import { AircraftCardList } from './AircraftCardList';
 import AircraftMock from '../../../__mocks__/aircraft';
 
 const aircrafts = [AircraftMock];
-const TEST_ID = 'list';
+const TEST_ID = 'aircraft-list';
 
 it('render aircraft card list', () => {
   const { getByTestId } = render(

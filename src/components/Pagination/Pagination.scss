@@ -1,0 +1,23 @@
+@use 'src/styles/variables';
+@use 'src/styles/mixins';
+
+.pagination {
+  width: 100%;
+  padding: 8px;
+  @include mixins.center;
+
+  .btn {
+    margin: 0 8px;
+    padding: 8px 16px;
+    border: 1px solid variables.$color-primary;
+    border-radius: 4px;
+    font-size: variables.$font-size-medium;
+    font-weight: variables.$font-weight-bold;
+    color: variables.$color-primary;
+  }
+
+  span {
+    margin: 0 16px;
+    font-weight: variables.$font-weight-bold;
+  }
+}

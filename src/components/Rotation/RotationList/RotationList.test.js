@@ -6,7 +6,7 @@ import mock from '../../../__mocks__/flights';
 
 const data = mock;
 
-const TEST_ID = 'list';
+const TEST_ID = 'rotation-list';
 
 it('render rotation list', () => {
   const { getByTestId } = render(<RotationList flights={data} />);
