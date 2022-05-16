@@ -17,10 +17,10 @@ export const reducer = (state, action) => {
      * updateFlights
      * ============
      */
-    case 'updateFlights' :
+    case 'updateFlights':
       return {
         ...state,
-        flights: {...action.payload},
+        flights: { ...action.payload },
       };
     /*
      * updateAircrafts
@@ -29,7 +29,7 @@ export const reducer = (state, action) => {
     case 'updateAircrafts':
       return {
         ...state,
-        aircrafts: {...action.payload},
+        aircrafts: { ...action.payload },
       };
     /*
      * addItemIntoRotation
@@ -77,6 +77,9 @@ export const reducer = (state, action) => {
      * ============
      */
     case 'setActiveAircraft':
+      if (state.aircrafts.active === action.payload.id)
+        return state;
+
       return {
         ...state,
         aircrafts: {
