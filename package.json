@@ -1,6 +1,10 @@
 {
   "name": "willians-aircraft-scheduling",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.17.0",
+    "npm": "6.14.13"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -11,6 +15,7 @@
     "react-scripts": "5.0.1",
     "sass": "^1.51.0"
   },
+  "homepage": ".",
   "devDependencies": {
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
