@@ -5,7 +5,7 @@ import FlightCard from '../FlightCard';
 import Pagination from '../../Pagination';
 
 import messages from '../../../config/messages';
-import { getFlightAvailability } from '../../../utils/rotation';
+import { getFlightAvailability, getReason } from '../../../utils/rotation';
 
 import {
   calculateTotalPages,
@@ -33,6 +33,7 @@ export const FlightList = ({
             hoverText={text}
             disabled={!getFlightAvailability(rotation, flight)}
             testId={`flight-${flight.id}`}
+            reason={getReason(rotation, flight)}
           />
         ))}
       />

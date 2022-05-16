@@ -13,6 +13,7 @@ export const FlightCard = ({
   disabled,
   hoverText,
   testId = 'flight-card',
+  reason='should be this etc etc',
 }) => (
   <Button
     testId={testId}
@@ -26,12 +27,16 @@ export const FlightCard = ({
     <div className="card__container">
       <div className="station departure">
         <p className="station__name">{origin}</p>
-        <p className="station__time" data-time={departuretime}>{formatTime(departuretime)}</p>
+        <p className="station__time" data-time={departuretime}>
+          {formatTime(departuretime)}
+        </p>
       </div>
       <span>{'>'}</span>
       <div className="station arrival">
         <p className="station__name">{destination}</p>
-        <p className="station__time" data-time={arrivaltime}>{formatTime(arrivaltime)}</p>
+        <p className="station__time" data-time={arrivaltime}>
+          {formatTime(arrivaltime)}
+        </p>
       </div>
     </div>
 
@@ -40,6 +45,10 @@ export const FlightCard = ({
         <p>{hoverText}</p>
       </span>
     )}
+
+    <span className="reason">
+      <p>{reason}</p>
+    </span>
   </Button>
 );
 

@@ -36,8 +36,19 @@
     font-weight: variables.$font-weight-light;
   }
 
-  .hover-text {
+  .hover-text,
+  .reason {
     display: none;
+  }
+
+  &:disabled {
+    .reason {
+      display: flex;
+      margin-top: 8px;
+      text-align: left;
+
+      font-size: variables.$font-size-small;
+    }
   }
 
   &:hover:not(:disabled) {

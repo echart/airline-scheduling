@@ -1,4 +1,5 @@
 import config from '../config/config';
+import messages from '../config/messages';
 
 /**
  * get last flight from the given rotation:
@@ -65,6 +66,19 @@ export const getFlightAvailability = (rotation, flight) => {
     willBeOnTheGroundAtMidnight(flight)
   );
 };
+
+export const getReason = (rotation, flight) => {
+  const reasons = messages.reasons;
+
+  if(!isOnTheSameAirport(rotation, flight))
+    return reasons.airport;
+  if(!isTimeAvailable(rotation, flight))
+    return reasons.time;
+  else if(!willBeOnTheGroundAtMidnight(flight))
+    return reasons.midnight
+
+  return '';
+}
 
 /**
  * get flight duration
