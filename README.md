@@ -10,14 +10,6 @@ All topics in this readme:
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#sobre-o-projeto">About the project</a>
-      <ul>
-        <li><a href="#technologies">Technologies:</a></li>
-        <li><a href="#status">Status:</a></li>
-        <li><a href="#structure">Project Structure:</a></li>
-      </ul>
-    </li>
-    <li>
       <a href="#start">Getting Start</a>
       <ul>
         <li><a href="#instalação">Installation:</a></li>
@@ -25,8 +17,71 @@ All topics in this readme:
         <li><a href="#starting">Running:</a></li>
       </ul>
     </li>
+    <li>
+      <a href="#sobre-o-projeto">About the project</a>
+      <ul>
+        <li><a href="#technologies">Technologies:</a></li>
+        <li><a href="#status">Status:</a></li>
+        <li><a href="#structure">Project Structure:</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
+
+
+
+## Getting Started
+
+### Install
+
+Installing the project:
+
+```sh
+yarn install
+```
+
+### Configuration
+
+1. Open .env from the root path
+2. Add the API_HOST for the api requests
+   ```sh
+   REACT_APP_API_HOST=http://api.url/
+   ```
+   <p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
+
+### Running
+
+Running the project:
+
+```sh
+yarn start
+```
+
+Running cypress integration tests:
+
+```sh
+yarn cypress:open
+```
+
+Running unit tests:
+
+```sh
+yarn test
+```
+
+Running storybook:
+
+```sh
+yarn storybook
+```
+
+Build:
+
+```sh
+yarn build
+```
+
+<p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
 
 <!-- ABOUT THE PROJECT -->
 
@@ -95,58 +150,5 @@ The initial project structure was created with create-react-app, cleaning all no
 - cypress/integration
 
   All integration tests where located in cypress/integration
-
-<p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
-
-## Getting Started
-
-### Install
-
-Installing the project:
-
-```sh
-yarn install
-```
-
-### Configuration
-
-1. Open .env from the root path
-2. Add the API_HOST for the api requests
-   ```sh
-   REACT_APP_API_HOST=http://api.url/
-   ```
-   <p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
-
-### Running
-
-Running the project:
-
-```sh
-yarn start
-```
-
-Running cypress integrationtests:
-
-```sh
-yarn cypress:open
-```
-
-Running unit tests:
-
-```sh
-yarn test
-```
-
-Running storybook:
-
-```sh
-yarn storybook
-```
-
-Build:
-
-```sh
-yarn build
-```
 
 <p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
