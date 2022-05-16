@@ -11,6 +11,9 @@ export const AircraftCardList = ({
 }) => {
   return (
     <List
+      id='aircraft-list'
+      className='aircraft-list'
+      itemClassName='aircraft-list__item'
       items={aircrafts.map((aircraft) => (
         <AircraftCard
           {...aircraft}

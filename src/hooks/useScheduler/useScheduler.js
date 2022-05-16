@@ -80,7 +80,7 @@ export const useScheduler = () => {
         },
       });
     }
-  }, [aircrafts, flights]);
+  }, [aircrafts, flights, state.initialized]);
 
   return {
     ...state,

@@ -22,16 +22,20 @@ export const Scheduler = () => {
         />
       </Container>
       <Container
-        className="column-8"
+        className="column-8 rotation-container"
         hasPadding
-        title={`Rotation ${aircrafts.active || ``}`}
+        title={`${
+          aircrafts.active
+            ? `Rotation for aircraft: ${aircrafts.active}`
+            : `Rotation`
+        }`}
       >
         <Datepicker onChangeDate={actions.onChangeDate} />
         <RotationList flights={rotation} onSelect={actions.onRemoveRotation} />
         <Timeline items={rotation} />
       </Container>
       <Container
-        className="column-4"
+        className="column-4 flights-container"
         title="Available Flights"
         hasPadding={flights.loading}
       >

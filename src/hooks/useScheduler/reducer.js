@@ -63,7 +63,7 @@ export const reducer = (state, action) => {
         ...state,
         aircrafts: {
           ...state.aircrafts,
-          active: action.payload,
+          active: action.payload.id,
         },
         rotation: [],
       };
