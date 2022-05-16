@@ -28,8 +28,6 @@ All topics in this readme:
   </ol>
 </details>
 
-
-
 ## Getting Started
 
 ### Install
@@ -43,7 +41,7 @@ yarn install
 ### Configuration
 
 1. Open .env from the root path
-2. Add the API_HOST for the api requests
+2. Add the API_HOST for the api requests(already defined a development API on .env.development)
    ```sh
    REACT_APP_API_HOST=http://api.url/
    ```
