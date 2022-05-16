@@ -34,7 +34,7 @@ All topics in this readme:
 
 This is an aircraft scheduling project to optimize utilization for aircrafts of a fake aircraft company.
 
-<p align="right">(<a href="#about">Back to top</a>)</p>
+<p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
 
 ### Tecnologies
 
@@ -47,7 +47,7 @@ This project was created with create-react-app; Below are all the technologies/t
 - [Cypress](https://github.com/cypress-io/cypress)
 - [prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
-<p align="right">(<a href="#technologies">Back to top</a>)</p>
+<p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
 
 ### Status
 
@@ -61,7 +61,7 @@ The project feature status currently is:
 - [ ] Save the current rotation
 - [ ] Mobile: Mobile should have a specific behavior, even if it's currently working, this project did not focus on-grid and this stuff, only to create a basic page structure on desktop.
 
-<p align="right">(<a href="#status">Back to top</a>)</p>
+<p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
 
 ### Project Structure
 
@@ -96,7 +96,7 @@ The initial project structure was created with create-react-app, cleaning all no
 
   All integration tests where located in cypress/integration
 
-<p align="right">(<a href="#structure">Back to top</a>)</p>
+<p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
 
 ## Getting Started
 
@@ -115,7 +115,7 @@ yarn install
    ```sh
    REACT_APP_API_HOST=http://api.url/
    ```
-   <p align="right">(<a href="#configuration">Back to top</a>)</p>
+   <p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
 
 ### Running
 
@@ -149,4 +149,4 @@ Build:
 yarn build
 ```
 
-<p align="right">(<a href="#running">Back to top</a>)</p>
+<p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
