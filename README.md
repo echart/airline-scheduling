@@ -109,10 +109,19 @@ The project feature status currently is:
 - [x] Get aircrafts and flights from the API
 - [x] Select aircrafts to create rotation
 - [x] Add and Remove flights to create rotation(following the rules) and check aircraft utilization
-- [x] Timeline
-- [x] User can only create rotation for the next day
-- [ ] Save the current rotation
+- [x] Rotation Timeline
+- [x] User can only create rotation for the next day based on three basic rules:
+
+  - All aircrafts must be on the ground at midnight.
+  - Aircrafts cannot be moved without operating a flight
+  - The minimum time between each flight it is 20 minutes
+
+- [ ] Save the current rotation (not required)
 - [ ] Mobile: Mobile should have a specific behavior, even if it's currently working, this project did not focus on-grid and this stuff, only to create a basic page structure on desktop.
+- [x] Design followed the wireframe, doing some adjustments
+- [x] Browser Matrix: Last Chrome, Firefox or Safari versions
+- [x] Unit and Integration tests to validate business logic
+
 
 <p align="right">(<a href="#aircraft-scheduling">Back to top</a>)</p>
 
