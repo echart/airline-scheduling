@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+# Aircraft Scheduling
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image description](public/app.png)
 
-## Available Scripts
+## Content
 
-In the project directory, you can run:
+All topics in this readme:
 
-### `yarn start`
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">About the project</a>
+      <ul>
+        <li><a href="#technologies">Technologies:</a></li>
+        <li><a href="#status">Status:</a></li>
+        <li><a href="#structure">Project Structure:</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#start">Getting Start</a>
+      <ul>
+        <li><a href="#instalação">Installation:</a></li>
+        <li><a href="#configuration">Configuration:</a></li>
+        <li><a href="#starting">Running:</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- ABOUT THE PROJECT -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## About the project
 
-### `yarn test`
+This is an aircraft scheduling project to optimize utilization for aircrafts of a fake aircraft company.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="right">(<a href="#about">Back to top</a>)</p>
 
-### `yarn build`
+### Tecnologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was created with create-react-app; Below are all the technologies/tools involved:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [React.js](https://reactjs.org/)
+- [Storybook](https://storybook.js.org/)
+- [Sass](https://github.com/sass/node-sass)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Cypress](https://github.com/cypress-io/cypress)
+- [prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#technologies">Back to top</a>)</p>
 
-### `yarn eject`
+### Status
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The project feature status currently is:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [x] Get aircrafts and flights from the API
+- [x] Select aircrafts to create rotation
+- [x] Add and Remove flights to create rotation(following the rules) and check aircraft utilization
+- [x] Timeline
+- [x] User can only create rotation for the next day
+- [ ] Save the current rotation
+- [ ] Mobile: Mobile should have a specific behavior, even if it's currently working, this project did not focus on-grid and this stuff, only to create a basic page structure on desktop.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="right">(<a href="#status">Back to top</a>)</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Project Structure
 
-## Learn More
+The initial project structure was created with create-react-app, cleaning all non used files. The current structure is:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- src/components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  Where all the components of the application are. All components have MD files containing a basic explanation of what the components are. Example: Flights, Flights List, Aircraft, Scheduler, Pagination etc..
 
-### Code Splitting
+- src/config
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  Configuration files for endpoints, messages and other config variables.
 
-### Analyzing the Bundle Size
+- src/hooks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  Custom hooks were created to consume and handle logical stuff with the flight/aircraft/rotation data in order to facilitate the development.
 
-### Making a Progressive Web App
+- src/**mocks**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  Mock data to storybook and test utilization
 
-### Advanced Configuration
+- src/utils
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  Utility files with functions to facilitate the development
 
-### Deployment
+- src/styles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  All styles here are common to the application. But components specific styles are on their respective paths.
+  Exemplo: Variables, global, grid, etc
 
-### `yarn build` fails to minify
+- cypress/integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  All integration tests where located in cypress/integration
+
+<p align="right">(<a href="#structure">Back to top</a>)</p>
+
+## Getting Started
+
+### Install
+
+Installing the project:
+
+```sh
+yarn install
+```
+
+### Configuration
+
+1. Open .env from the root path
+2. Add the API_HOST for the api requests
+   ```sh
+   REACT_APP_API_HOST=http://api.url/
+   ```
+   <p align="right">(<a href="#configuration">Back to top</a>)</p>
+
+### Running
+
+Running the project:
+
+```sh
+yarn start
+```
+
+Running cypress integrationtests:
+
+```sh
+yarn cypress:open
+```
+
+Running unit tests:
+
+```sh
+yarn test
+```
+
+Running storybook:
+
+```sh
+yarn storybook
+```
+
+Build:
+
+```sh
+yarn build
+```
+
+<p align="right">(<a href="#running">Back to top</a>)</p>
