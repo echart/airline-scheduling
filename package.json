@@ -28,7 +28,6 @@
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.11",
     "cypress": "^9.6.1",
-    "cypress:open": "cypress open",
     "prop-types": "^15.8.1",
     "webpack": "^5.72.0"
   },
@@ -38,7 +37,8 @@
     "test": "react-scripts test --watchAll --detectOpenHandles",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "cypress:open": "cypress open",
   },
   "eslintConfig": {
     "extends": [
